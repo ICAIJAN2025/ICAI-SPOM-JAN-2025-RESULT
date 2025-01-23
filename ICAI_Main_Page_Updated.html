@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICAI Result Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .container img {
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+        .container h1 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="ICAI Logo">
+        <h1>ICAI Result Portal</h1>
+        <p>Enter your SRN and Roll Number to view your result.</p>
+        <input type="text" id="srn" placeholder="Enter SRN">
+        <input type="text" id="rollNo" placeholder="Enter Roll Number">
+        <button onclick="checkResult()">Submit</button>
+    </div>
+
+    <script>
+        function checkResult() {
+            const srn = document.getElementById('srn').value;
+            const rollNo = document.getElementById('rollNo').value;
+
+            if (srn === 'WRO0625333' && rollNo === 'B-210125-65612') {
+                // Redirect to Strategic Cost Performance Management result page
+                window.location.href = 'result_strategic_cost_performance_management.html';
+            } else if (srn === 'WRO0625333' && rollNo === 'A-190125-65612') {
+                // Redirect to Corporate Economic Laws result page
+                window.location.href = 'result_corporate_economic_laws.html';
+            } else {
+                alert('Invalid SRN or Roll Number. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
